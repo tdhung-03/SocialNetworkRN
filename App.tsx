@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
-import Header from "./src/components/Header";
+import { View } from "react-native";
+import Developers from "./src/screens/Developers";
 
 const App = () =>{
   return (
     <View>
-      <Header />
+      <Developers />
     </View>
   )
 }

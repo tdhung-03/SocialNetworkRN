@@ -1,5 +1,5 @@
 import {View, StyleSheet} from 'react-native';
-import Logo from '../assets/images/logo.svg';
+import Logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   return (

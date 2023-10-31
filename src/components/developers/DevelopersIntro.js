@@ -15,6 +15,7 @@ const DevelopersIntro = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2d2d39',
+    alignItems: 'center',
   },
 });
 

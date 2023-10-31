@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     width: 365,
     borderRadius: 5,
     paddingHorizontal: 15,
+    marginBottom: 10,
   },
 });
 export default SearchInput;

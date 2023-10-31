@@ -5,7 +5,10 @@ import SearchInput from '../general/SearchInput';
 const DevelopersIntro = () => {
   return (
     <View style={styles.container}>
-      <Text>CONNECT WITH DEVELOPERS FROM AROUND THE WORLD</Text>
+      <Text style={styles.text}>
+        CONNECT WITH <Text style={{fontWeight: '900'}}>DEVELOPERS</Text> FROM
+        AROUND THE WORLD
+      </Text>
       <SearchInput />
       <SearchButton />
     </View>
@@ -16,6 +19,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2d2d39',
     alignItems: 'center',
+    paddingVertical: 80,
+  },
+  text: {
+    color: 'white',
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: '300',
+    marginBottom: 40,
   },
 });
 

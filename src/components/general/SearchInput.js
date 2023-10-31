@@ -1,9 +1,7 @@
 import {TextInput, StyleSheet} from 'react-native';
 
-const SearchInput = () => {
-  return (
-    <TextInput style={styles.input} placeholder="Search by developer name" />
-  );
+const SearchInput = ({text}) => {
+  return <TextInput style={styles.input} placeholder={text} />;
 };
 
 const styles = StyleSheet.create({

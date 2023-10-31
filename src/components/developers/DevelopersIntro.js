@@ -9,7 +9,7 @@ const DevelopersIntro = () => {
         CONNECT WITH <Text style={{fontWeight: '900'}}>DEVELOPERS</Text> FROM
         AROUND THE WORLD
       </Text>
-      <SearchInput />
+      <SearchInput text="Search by developer name" />
       <SearchButton />
     </View>
   );
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2d2d39',
     alignItems: 'center',
-    paddingVertical: 80,
+    paddingVertical: 65,
   },
   text: {
     color: 'white',

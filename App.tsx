@@ -9,7 +9,7 @@ import Inbox from "./src/screens/Inbox";
 
 const App = () =>{
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: "#f8fafd"}}>
       {/* <Developers /> */}
       {/* <Projects /> */}
       {/* <Login /> */}

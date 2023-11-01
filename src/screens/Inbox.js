@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderColor: '#e5e7eb',
     borderRadius: 5,
+    backgroundColor: 'white',
   },
 });
 

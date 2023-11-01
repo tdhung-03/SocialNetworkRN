@@ -1,4 +1,5 @@
 import {View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
+import Field from '../components/auth/Field';
 
 const Login = () => {
   return (
@@ -17,6 +18,10 @@ const Login = () => {
               <Text style={styles.textIntro}>
                 Hello Developer, Welcome Back!
               </Text>
+            </View>
+            <View style={styles.body}>
+              <Field title="Username: " placeholder="Enter your username..." />
+              <Field title="Password: " placeholder="••••••••" />
             </View>
           </View>
         </View>
@@ -40,6 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     paddingVertical: 20,
+    paddingHorizontal: 35,
   },
   header: {
     alignItems: 'center',
@@ -58,6 +64,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#737373',
     marginTop: 4,
+  },
+  body: {
+    marginTop: 5,
   },
 });
 

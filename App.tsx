@@ -7,6 +7,7 @@ import Signup from "./src/screens/Signup";
 import ForgetPassword from "./src/screens/ForgetPassword";
 import Inbox from "./src/screens/Inbox";
 import Account from "./src/screens/Account";
+import Profile from "./src/screens/Profile";
 
 const App = () =>{
   return (
@@ -17,7 +18,8 @@ const App = () =>{
       {/* <Signup /> */}
       {/* <ForgetPassword /> */}
       {/* <Inbox /> */}
-      <Account />
+      {/* <Account /> */}
+      <Profile />
     </View>
   )
 }

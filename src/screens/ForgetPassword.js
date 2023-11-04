@@ -9,8 +9,13 @@ import {
 import Field from '../components/auth/Field';
 import ConfirmButton from '../components/auth/ConfirmButton';
 import Redirect from '../components/auth/Redirect';
+import {useNavigation} from '@react-navigation/native';
 
 const ForgetPassword = () => {
+  const navigation = useNavigation();
+  const loginPress = () => {
+    navigation.navigate('Login');
+  };
   return (
     <>
       <ImageBackground
@@ -37,11 +42,15 @@ const ForgetPassword = () => {
             <View style={styles.footer}>
               <View style={styles.idk}>
                 <ConfirmButton text="Send Instructions" />
-                <Pressable style={styles.forget}>
+                <Pressable style={styles.forget} onPress={loginPress}>
                   <Text style={styles.forgetText}>Login</Text>
                 </Pressable>
               </View>
-              <Redirect guide="Don't have an Account?" textButton="Sign Up" />
+              <Redirect
+                guide="Don't have an Account?"
+                textButton="Sign Up"
+                screen="Signup"
+              />
             </View>
           </View>
         </View>

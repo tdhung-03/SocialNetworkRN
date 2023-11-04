@@ -10,39 +10,53 @@ import Account from './src/screens/Account';
 import Profile from './src/screens/Profile';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator initialRouteName="Developers">
+      <Tab.Screen
+        name="Developers"
+        component={Developers}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="Projects"
+        component={Projects}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="Inbox"
+        component={Inbox}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="Account"
+        component={Account}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+    </Tab.Navigator>
+  );
+};
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="Developers">
-        <Tab.Screen
-          name="Developers"
-          component={Developers}
-          options={{headerShown: false}}
-        />
-        <Tab.Screen
-          name="Projects"
-          component={Projects}
-          options={{headerShown: false}}
-        />
-        <Tab.Screen
-          name="Inbox"
-          component={Inbox}
-          options={{headerShown: false}}
-        />
-        <Tab.Screen
-          name="Account"
-          component={Account}
-          options={{headerShown: false}}
-        />
-        <Tab.Screen
-          name="Login"
-          component={Login}
-          options={{headerShown: false}}
-        />
-      </Tab.Navigator>
+      <Stack.Navigator
+        initialRouteName="TabNavigator"
+        screenOptions={{headerShown: false}}>
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+        <Stack.Screen name="Signup" component={Signup} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

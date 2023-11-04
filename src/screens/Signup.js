@@ -34,7 +34,11 @@ const Signup = () => {
 
             <View style={styles.footer}>
               <ConfirmButton text="Sign In" />
-              <Redirect guide="Already have an Account?" textButton="Log In" />
+              <Redirect
+                guide="Already have an Account?"
+                textButton="Log In"
+                screen="Login"
+              />
             </View>
           </View>
         </View>

@@ -1,10 +1,15 @@
 import {Text, Pressable, StyleSheet} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-const Redirect = ({guide, textButton}) => {
+const Redirect = ({guide, textButton, screen}) => {
+  const navigation = useNavigation();
+  const returnSignup = () => {
+    navigation.navigate(screen);
+  };
   return (
     <>
       <Text style={styles.guide}>{guide}</Text>
-      <Pressable>
+      <Pressable onPress={returnSignup}>
         <Text style={styles.textButton}>{textButton}</Text>
       </Pressable>
     </>

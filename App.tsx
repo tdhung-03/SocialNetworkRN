@@ -17,11 +17,31 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Developers">
-        <Tab.Screen name="Developers" component={Developers} />
-        <Tab.Screen name="Projects" component={Projects} />
-        <Tab.Screen name="Inbox" component={Inbox} />
-        <Tab.Screen name="Account" component={Account} />
-        <Tab.Screen name="Login" component={Login} />
+        <Tab.Screen
+          name="Developers"
+          component={Developers}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Projects"
+          component={Projects}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Inbox"
+          component={Inbox}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Account"
+          component={Account}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

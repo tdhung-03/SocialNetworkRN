@@ -1,15 +1,24 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Pressable} from 'react-native';
 import Logo from '../../assets/images/logo.svg';
+import {useNavigation} from '@react-navigation/native';
 
 const HorizontalLine = () => {
   return <View style={styles.line}></View>;
 };
 
 const Header = () => {
+  const navigation = useNavigation();
+
+  const returnDevelopers = () => {
+    navigation.navigate('Developers');
+  };
+
   return (
     <>
       <View style={styles.container}>
-        <Logo height={30} />
+        <Pressable onPress={returnDevelopers}>
+          <Logo height={30} />
+        </Pressable>
       </View>
       <HorizontalLine />
     </>

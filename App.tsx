@@ -9,25 +9,20 @@ import Inbox from './src/screens/Inbox';
 import Account from './src/screens/Account';
 import Profile from './src/screens/Profile';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Projects"
-        screenOptions={{contentStyle: {backgroundColor: '#f8fafd', flex: 1}}}>
-        <Stack.Screen name="Signup" component={Signup} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
-        <Stack.Screen name="Inbox" component={Inbox} />
-        <Stack.Screen name="Account" component={Account} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Developers" component={Developers} />
-        <Stack.Screen name="Projects" component={Projects} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Developers">
+        <Tab.Screen name="Developers" component={Developers} />
+        <Tab.Screen name="Projects" component={Projects} />
+        <Tab.Screen name="Inbox" component={Inbox} />
+        <Tab.Screen name="Account" component={Account} />
+        <Tab.Screen name="Login" component={Login} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };

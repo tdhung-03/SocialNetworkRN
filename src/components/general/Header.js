@@ -8,7 +8,6 @@ const HorizontalLine = () => {
 
 const Header = () => {
   const navigation = useNavigation();
-
   const returnDevelopers = () => {
     navigation.navigate('Developers');
   };

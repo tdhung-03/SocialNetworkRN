@@ -10,6 +10,7 @@ import Field from '../components/auth/Field';
 import ConfirmButton from '../components/auth/ConfirmButton';
 import Redirect from '../components/auth/Redirect';
 import {useNavigation} from '@react-navigation/native';
+import AuthHeader from '../components/auth/AuthHeader';
 
 const ForgetPassword = () => {
   const navigation = useNavigation();
@@ -24,15 +25,10 @@ const ForgetPassword = () => {
         resizeMode="repeat">
         <View style={styles.overlay}>
           <View style={styles.container}>
-            <View style={styles.header}>
-              <Image
-                source={require('../assets/images/favicon-3.png')}
-                style={styles.logo}></Image>
-              <Text style={styles.textHeader}>Forget Password?</Text>
-              <Text style={styles.textIntro}>
-                Reset password by entering the email address
-              </Text>
-            </View>
+            <AuthHeader
+              title="Forget Password?"
+              desc="Reset password by entering the email address"
+            />
             <View style={styles.body}>
               <Field
                 title="Email Address: "
@@ -76,25 +72,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 35,
     paddingBottom: 50,
-  },
-  header: {
-    alignItems: 'center',
-  },
-  logo: {
-    height: 60,
-    width: 60,
-  },
-  textHeader: {
-    fontSize: 26,
-    fontWeight: '800',
-    color: '#2d2d39',
-    marginTop: 9,
-  },
-  textIntro: {
-    fontSize: 15,
-    color: '#737373',
-    marginTop: 4,
-    textAlign: 'center',
   },
   body: {
     marginTop: 5,

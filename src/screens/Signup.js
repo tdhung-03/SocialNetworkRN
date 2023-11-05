@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
 import Field from '../components/auth/Field';
 import ConfirmButton from '../components/auth/ConfirmButton';
 import Redirect from '../components/auth/Redirect';
+import AuthHeader from '../components/auth/AuthHeader';
 
 const Signup = () => {
   return (
@@ -12,16 +13,10 @@ const Signup = () => {
         resizeMode="repeat">
         <View style={styles.overlay}>
           <View style={styles.container}>
-            <View style={styles.header}>
-              <Image
-                source={require('../assets/images/favicon-3.png')}
-                style={styles.logo}></Image>
-              <Text style={styles.textHeader}>Account SignUp</Text>
-              <Text style={styles.textIntro}>
-                Create a new developer account
-              </Text>
-            </View>
-
+            <AuthHeader
+              title="Account SignUp"
+              desc="Create a new developer account"
+            />
             <View style={styles.body}>
               <Field title="Full Name: " placeholder="e.g. Tran Duy Hung" />
               <Field
@@ -64,24 +59,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 35,
     paddingBottom: 50,
-  },
-  header: {
-    alignItems: 'center',
-  },
-  logo: {
-    height: 60,
-    width: 60,
-  },
-  textHeader: {
-    fontSize: 26,
-    fontWeight: '800',
-    color: '#2d2d39',
-    marginTop: 9,
-  },
-  textIntro: {
-    fontSize: 15,
-    color: '#737373',
-    marginTop: 4,
   },
   footer: {
     marginTop: 17,

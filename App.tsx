@@ -38,11 +38,6 @@ const TabNavigator = () => {
         component={Account}
         options={{headerShown: false}}
       />
-      <Tab.Screen
-        name="Login"
-        component={Login}
-        options={{headerShown: false}}
-      />
     </Tab.Navigator>
   );
 };
@@ -56,6 +51,7 @@ const App = () => {
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
         <Stack.Screen name="Signup" component={Signup} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
